@@ -1,0 +1,17 @@
+<a
+  *ngFor="let i of recipe"
+  href="#"
+  class="list-group-item clearfix"
+  (click)="onSelected(i)">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ i.name }}</h4>
+    <p class="list-group-item-text">{{ i.desc }}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          [src]="i.imagePath"
+          alt="{{ i.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
+</a>
